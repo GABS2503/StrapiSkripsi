@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livestream_comments",
+  "info": {
+    "singularName": "livestream-comment",
+    "pluralName": "livestream-comments",
+    "displayName": "LivestreamComment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "User": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "livestream_comments"
+    },
+    "Livestream": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::livestream.livestream",
+      "inversedBy": "livestream_comments"
+    }
+  }
+}

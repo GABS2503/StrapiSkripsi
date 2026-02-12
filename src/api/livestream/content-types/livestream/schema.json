@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livestreams",
+  "info": {
+    "singularName": "livestream",
+    "pluralName": "livestreams",
+    "displayName": "Livestream"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "streamUrl": {
+      "type": "string"
+    },
+    "isLive": {
+      "type": "boolean"
+    },
+    "seller": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "livestreams"
+    },
+    "relatedProduct": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "relatedService": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "livestream_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::livestream-comment.livestream-comment",
+      "mappedBy": "Livestream"
+    }
+  }
+}
