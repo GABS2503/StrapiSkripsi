@@ -1286,6 +1286,8 @@ export interface PluginUsersPermissionsUser
     >;
     services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
     shop: Schema.Attribute.Relation<'oneToOne', 'api::shop.shop'>;
+    shopDescription: Schema.Attribute.Text;
+    shopLocation: Schema.Attribute.JSON;
     shopName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
