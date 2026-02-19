@@ -132,6 +132,12 @@
       "relation": "oneToMany",
       "target": "api::order.order",
       "mappedBy": "seller"
+    },
+    "shopLocation": {
+      "type": "json"
+    },
+    "shopDescription": {
+      "type": "text"
     }
   }
 }
