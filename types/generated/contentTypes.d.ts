@@ -635,6 +635,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     customAttributes: Schema.Attribute.JSON;
     description: Schema.Attribute.Text;
+    isPromo: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -647,6 +648,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     >;
     name: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
+    promoPrice: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
     seller: Schema.Attribute.Relation<
@@ -717,6 +719,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     customAttributes: Schema.Attribute.JSON;
     description: Schema.Attribute.Text;
+    isPromo: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -729,6 +732,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     >;
     name: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
+    promoPrice: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
     seller: Schema.Attribute.Relation<

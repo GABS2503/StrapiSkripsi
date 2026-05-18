@@ -59,6 +59,12 @@
     },
     "category": {
       "type": "string"
+    },
+    "isPromo": {
+      "type": "boolean"
+    },
+    "promoPrice": {
+      "type": "integer"
     }
   }
 }

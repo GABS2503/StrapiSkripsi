@@ -59,6 +59,12 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "product"
+    },
+    "isPromo": {
+      "type": "boolean"
+    },
+    "promoPrice": {
+      "type": "integer"
     }
   }
 }
